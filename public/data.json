@@ -1,0 +1,18 @@
+[
+    {
+        "year" : 2025,
+        "month" : 3,
+        "history" : [
+            {"day" : 14, "field" : "식비", "detail" : "칼국수", "income" : 0, "expenditure" : 7500, "left" : 20000}, 
+            {"day" : 15, "field" : "식비", "detail" : "학식", "income" : 0, "expenditure" : 5300, "left" : 14700}
+        ]
+    },
+    {
+        "year" : 2025,
+        "month" : 4,
+        "history" : [
+            {"day" : 14, "field" : "식비", "detail" : "칼국수", "income" : 0, "expenditure" : 7500, "left" : 20000}, 
+            {"day" : 15, "field" : "식비", "detail" : "학식", "income" : 0, "expenditure" : 5300, "left" : 14700}
+        ]
+    }
+]
