@@ -1,6 +1,7 @@
 import styles from './History.module.css';
 
 function History({ data }) {
+  console.log(`히스 ${data}`);
 
   if (data.history.length === 0){
     return(

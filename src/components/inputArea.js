@@ -3,7 +3,7 @@ import styles from './InputArea.module.css';
 
 function InputArea({handleHis, margin, handleLeft}){
   let today = new Date();
-  let nowDay = today.getDay();
+  let nowDay = today.getDate();
 
   const [field, setField] = useState("");
   const [detail, setDetail] = useState("");
@@ -13,11 +13,9 @@ function InputArea({handleHis, margin, handleLeft}){
   const adding = () => {
     if (field.trim() === "") return;
     if (detail.trim() === "") return;
-    if (income.trim() === "") return;
-    if (expenditure.trim() === "") return;
 
-    handleHis({"day" : nowDay, "field" : field, "detail" : detail, "income" : income, "expenditure" : expenditure, "left" : margin-expenditure+income});
-    handleLeft(margin-expenditure+income);
+    handleHis({"day" : nowDay, "field" : field, "detail" : detail, "income" : income, "expenditure" : expenditure, "left" : Number(margin)-Number(expenditure)+Number(income)});
+    handleLeft(Number(margin)-Number(expenditure)+Number(income));
 
     setField("");
     setDetail("");
