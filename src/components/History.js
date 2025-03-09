@@ -1,14 +1,23 @@
 import styles from './History.module.css';
 
-function History({ history }) {
-  
+function History({ data }) {
+
+  if (data.history.length === 0){
+    return(
+      <details>
+        <summary>{`${data.year}년 ${data.month}월`}</summary>
+        <div>내역 없음</div>
+      </details>
+    );
+  }
+
   return(
     <details>
-      <summary>{`${history.year}년 ${history.month}월`}</summary>
-      {history.history.map((his, index) => {
+      <summary>{`${data.year}년 ${data.month}월`}</summary>
+      {data.history.map((his, index) => {
         return (
           <div>
-            <div>{`${history.year}/${history.month}/${his.day}`}</div>
+            <div>{`${data.year}/${data.month}/${his.day}`}</div>
             <div>{his.field}</div>
             <div>{his.detail}</div>
             <div>{his.income}</div>

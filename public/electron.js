@@ -1,7 +1,12 @@
+import fs from 'fs';
+import { fileURLToPath } from 'url';
+
 const { app, BrowserWindow, ipcMain } = await import("electron");
-const fs = require('fs');
 const path = await import("path");
 const isDev = await import("electron-is-dev");
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 let mainWindow;
 
@@ -10,6 +15,7 @@ function createWindow() {
     width: 900,
     height: 680,
     webPreferences: {
+      preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
       enableRemoteModule: true,
       devTools: isDev,
