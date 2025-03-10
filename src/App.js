@@ -10,10 +10,15 @@ function App() {
 
   const [his, setHis] = useState([]);
   const [left, setLeft] = useState();
+  const [monthIndex, setMonthIndex] = useState(0);
 
   const addHis = async (newHis) => {
     const updated = await window.api.addHis(newHis);
     setHis(updated);
+  }
+
+  const handleSelect = (event) => {
+    setMonthIndex(event.target.value);
   }
 
   useEffect(() => {
@@ -36,8 +41,15 @@ function App() {
 
   return (
     <div>
+      <select onChange={handleSelect} value={monthIndex}>
+        {his.map((mon, index) => {
+          return(
+            <option value={index} key={index}>{`${mon.year}/${mon.month}`}</option>
+          );
+        })}
+      </select>
       <InputArea handleHis={addHis} margin={left} handleLeft={setLeft}/>
-      {his.length !== 0 ? <History data={his[0]}/> : <div>기록이 존재하지 않습니다.</div>}
+      {his.length !== 0 ? <History data={his[monthIndex]}/> : <div>기록이 존재하지 않습니다.</div>}
     </div>
   );
 }
