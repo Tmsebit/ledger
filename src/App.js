@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './App.css';
+import styles from './App.module.css';
 import History from './components/History.js'
 import InputArea from './components/InputArea.js'
 
@@ -40,16 +40,18 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <select onChange={handleSelect} value={monthIndex}>
-        {his.map((mon, index) => {
-          return(
-            <option value={index} key={index}>{`${mon.year}/${mon.month}`}</option>
-          );
-        })}
-      </select>
-      <InputArea handleHis={addHis} margin={left} handleLeft={setLeft}/>
-      {his.length !== 0 ? <History data={his[monthIndex]}/> : <div>기록이 존재하지 않습니다.</div>}
+    <div className={styles.window}>
+      <div>
+        <select onChange={handleSelect} value={monthIndex}>
+          {his.map((mon, index) => {
+            return(
+              <option value={index} key={index}>{`${mon.year}/${mon.month}`}</option>
+            );
+          })}
+        </select>
+        <InputArea handleHis={addHis} margin={left} handleLeft={setLeft}/>
+        {his.length !== 0 ? <History data={his[monthIndex]}/> : <div>기록이 존재하지 않습니다.</div>}
+      </div>
     </div>
   );
 }

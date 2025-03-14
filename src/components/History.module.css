@@ -1,0 +1,93 @@
+.box{
+    display : flex;
+}
+
+.title{
+    height:50px;
+    width:709px;
+    font-size:20px;
+    font-weight: 700;
+    border : 2px;
+    border-style: solid;
+    border-color: gray;
+    align-content : center;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom:5px;
+}
+
+.contentDate{
+    height:40px;
+    width:100px;
+    border: 2px;
+    border-top : 0px;
+    border-style: solid;
+    border-color: gray;
+    align-content : center;
+    text-align: center;
+}
+
+.contentBox{
+    height:40px;
+    width:90px;
+    border: 2px;
+    border-top : 0px;
+    border-left : 0px;
+    border-style: solid;
+    border-color: gray;
+    align-content : center;
+    padding-left : 10px;
+}
+
+.contentBoxBig{
+    height:40px;
+    width:190px;
+    border: 2px;
+    border-top : 0px;
+    border-left : 0px;
+    border-style: solid;
+    border-color: gray;
+    align-content : center;
+    padding-left : 10px;
+}
+
+.contentDateAlter{
+    height:30px;
+    width:100px;
+    font-weight: 500;
+    background-color: gray;
+    color: white;
+    border: 2px;
+    border-style: solid;
+    border-color: gray;
+    text-align:center;
+    align-content:center;
+}
+
+.contentBoxAlter{
+    height:30px;
+    width:100px;
+    font-weight: 500;
+    background-color: gray;
+    color: white;
+    border: 2px;
+    border-left : 0px;
+    border-style: solid;
+    border-color: gray;
+    text-align:center;
+    align-content:center;
+}
+
+.contentBoxAlterBig{
+    height:30px;
+    width:200px;
+    font-weight: 500;
+    background-color: gray;
+    color: white;
+    border: 2px;
+    border-left : 0px;
+    border-style: solid;
+    border-color: gray;
+    text-align:center;
+    align-content:center;
+}

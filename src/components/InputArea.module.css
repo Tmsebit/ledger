@@ -1,3 +1,90 @@
+.bigBox {
+    margin-top : 20px;
+    margin-bottom : 20px;
+}
+
 .box {
-    margin: 0px;
+    display:flex;
+}
+
+.subtitle{
+    height: 30px;
+    width:150px;
+    color : white;
+    font-weight: 500;
+    background-color: gray;
+    border-style:solid;
+    border-color:gray;
+    border-width: 2px;
+    border-right : 0px;
+    text-align:center;
+    align-content:center;
+}
+
+.subtitleEnd{
+    height: 30px;
+    width:150px;
+    color : white;
+    font-weight: 500;
+    background-color: gray;
+    border-style:solid;
+    border-color:gray;
+    border-width: 2px;
+    text-align:center;
+    align-content:center;
+}
+
+.inputBox {
+    display: flex;
+}
+
+.inputContainer{
+    display:flex;
+    border-style:solid;
+    border-color:gray;
+    border-width: 2px;
+    border-right : 0px;
+    height : 40px;
+    width : 150px;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputContainerEnd{
+    display:flex;
+    border-style:solid;
+    border-color:gray;
+    border-width: 2px;
+    height : 40px;
+    width : 150px;
+    align-items: center;
+    justify-content: center;
+}
+
+.input {
+    height : 30px;
+    width : 130px;
+    font-size : 16px;
+    border: none;
+    outline:none;
+    padding: 0px;
+    padding-left: 10px;
+}
+
+.button {
+    border : none;
+    border-radius: 5px;
+    background-color: lightgray;
+    height: 35px;
+    width : 55px;
+    padding : 0px;
+}
+
+.buttonBox {
+    margin:2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width : 80px;
 }

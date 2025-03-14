@@ -24,13 +24,21 @@ function InputArea({handleHis, margin, handleLeft}){
   }
 
   return (
-    <form className={styles.box}>
-      <input type='text' value={field} onChange={(event) => setField(event.target.value)} placeholder='분류' />
-      <input type='text' value={detail} onChange={(event) => setDetail(event.target.value)} placeholder='세부사항' />
-      <input type='number' value={income} onChange={(event) => setIncome(event.target.value)} placeholder='수입' />
-      <input type='number' value={expenditure} onChange={(event) => setExpenditure(event.target.value)} placeholder='지출' />
-      <button onClick={adding}>입력</button>
-    </form>
+    <div className={styles.bigBox}>
+      <div className={styles.box}>
+        <div className={styles.subtitle}>분류</div>
+        <div className={styles.subtitle}>세부사항</div>
+        <div className={styles.subtitle}>수입</div>
+        <div className={styles.subtitleEnd}>지출</div>
+      </div>
+      <div className={styles.inputBox}>
+        <div className={styles.inputContainer}><input className={styles.input} type='text' value={field} onChange={(event) => setField(event.target.value)} placeholder='분류' /></div>
+        <div className={styles.inputContainer}><input className={styles.input} type='text' value={detail} onChange={(event) => setDetail(event.target.value)} placeholder='세부사항' /></div>
+        <div className={styles.inputContainer}><input className={styles.input} type='number' value={income} onChange={(event) => setIncome(event.target.value)} placeholder='수입' /></div>
+        <div className={styles.inputContainerEnd}><input className={styles.input} type='number' value={expenditure} onChange={(event) => setExpenditure(event.target.value)} placeholder='지출' /></div>
+        <div className={styles.buttonBox}><button className={styles.button} onClick={adding}>입력</button></div>
+      </div>
+    </div>
   );
 }
 
